@@ -1,11 +1,12 @@
 # Folders
-/build
+build/
 .gradle
 .idea
 .settings
 .classpath
 .project
 /unused
+bin/
 
 # File Patterns
 *.class
