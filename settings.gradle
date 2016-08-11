@@ -11,5 +11,5 @@
 
 
 rootProject.name = 'microservice-sample'
-include 'gateway-service','microservice-commons','command-side','config-service','discovery-service','query-side'
+include 'microservice-commons','command-side','query-side','discovery-service','config-service','gateway-service'
 

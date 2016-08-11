@@ -4,6 +4,7 @@ buildscript {
     }
     repositories {
         mavenCentral()
+        jcenter()
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
@@ -21,6 +22,7 @@ jar {
 }
 
 group = 'pschlae'
+
 apply plugin: 'spring-boot'
 apply plugin: 'docker'
 
@@ -39,6 +41,7 @@ dependencies {
     compile("org.springframework.cloud:spring-cloud-starter-eureka")
     compile("org.springframework.cloud:spring-cloud-starter-config")
     testCompile("org.springframework.boot:spring-boot-starter-test")
+    testCompile("org.axonframework:axon-test:2.4.3")
 }
 
 dependencyManagement {
