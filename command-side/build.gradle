@@ -53,6 +53,11 @@ task wrapper(type: Wrapper) {
     gradleVersion = '2.14'
 }
 
+docker {
+    dockerBinary = 'C:/Program Files/Docker/Docker/resources/bin/docker.exe'
+    useApi false
+}
+
 task image(type: Docker, dependsOn: build){
     push = false
     applicationName = jar.baseName
