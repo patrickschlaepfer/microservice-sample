@@ -37,8 +37,8 @@ services:
      - discovery
      - config
   price-command-side:
-    image: pschlae/product-command-side:latest
-    container_name: product-cmd-side
+    image: pschlae/price-command-side:latest
+    container_name: price-cmd-side
     depends_on:
      - mongodb
      - rabbitmq
@@ -49,8 +49,8 @@ services:
     environment:
      - SPRING_PROFILES_ACTIVE=production
   price-query-side:
-    image: pschlae/product-query-side:latest
-    container_name: product-qry-side
+    image: pschlae/price-query-side:latest
+    container_name: price-qry-side
     depends_on:
      - rabbitmq
      - discovery

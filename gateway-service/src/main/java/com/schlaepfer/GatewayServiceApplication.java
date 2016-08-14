@@ -8,16 +8,17 @@ import org.springframework.context.annotation.Bean;
 import com.schlaepfer.prefilters.SimpleLoggingPreFilter;
 
 @SpringBootApplication
-@EnableZuulProxy //Acts as reverse proxy, forwarding requests to other services based on routes.
+@EnableZuulProxy // Acts as reverse proxy, forwarding requests to other services
+					// based on routes.
 public class GatewayServiceApplication {
-	
-	 @Bean
-	    public SimpleLoggingPreFilter simplePreFilter() {
-	        return new SimpleLoggingPreFilter();
-	    }
 
-	    public static void main(String[] args) {
-	        SpringApplication.run(GatewayServiceApplication.class, args);
-	    }
+	@Bean
+	public SimpleLoggingPreFilter simplePreFilter() {
+		return new SimpleLoggingPreFilter();
+	}
+
+	public static void main(String[] args) {
+		SpringApplication.run(GatewayServiceApplication.class, args);
+	}
 
 }
