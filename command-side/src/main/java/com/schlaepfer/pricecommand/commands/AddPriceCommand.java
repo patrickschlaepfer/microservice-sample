@@ -8,7 +8,7 @@ public class AddPriceCommand {
 	private final String id;
 	private final String name;
 
-	AddPriceCommand(String id, String name) {
+	public AddPriceCommand(String id, String name) {
 		this.id = id;
 		this.name = name;
 	}

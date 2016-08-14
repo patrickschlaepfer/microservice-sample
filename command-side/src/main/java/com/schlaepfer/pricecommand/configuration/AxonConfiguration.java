@@ -179,7 +179,8 @@ public class AxonConfiguration {
      */
     @Bean
     AggregateAnnotationCommandHandler<PriceAggregate> productAggregateCommandHandler() {
-        AggregateAnnotationCommandHandler<PriceAggregate> handler = new AggregateAnnotationCommandHandler<PriceAggregate>(
+    	
+    	AggregateAnnotationCommandHandler<PriceAggregate> handler = new AggregateAnnotationCommandHandler<PriceAggregate>(
                 PriceAggregate.class,
                 priceEventSourcingRepository(),
                 commandBus());
